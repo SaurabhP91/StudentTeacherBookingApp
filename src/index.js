@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, push, set, onValue, remove, update } from "firebase/database";
+import {useState,useContext} from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const appSettings = {
+  databaseURL: "https://studentteacherbookingapp-f22e2-default-rtdb.firebaseio.com/"
+
+}
+
+const app = initializeApp(appSettings);
+const database = getDatabase(app);
+const databaseContext = createContext();
+
+export const memberListInDB = ref(database, "memberList");
+export const studentListInDB = ref(database, "studentList");
+export const teacherListInDB = ref(database, "teacherList");
+export const appointmentListInDB = ref(database, "appointmentList");
+
+export const DatabaseProvider = ({children}) => {
+  const studentListInDB = ref(database, "studentList");
+  const teacherListInDB = ref(database, "teacherList");
+  const appointmentListInDB = ref(database, "appointmentList");
+
+  return(
+    <databaseContext.Provider value={{studentListInDB,teacherListInDB,appointmentListInDB}}>
+      {children}
+    </databaseContext.Provider>
+  )
+}
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <DatabaseProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </DatabaseProvider>
+ 
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

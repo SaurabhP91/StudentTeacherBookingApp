@@ -1,0 +1,131 @@
+#main-container{
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(../../../images/welcome-4737158_1920.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+    margin-left: 0%;
+    transition: margin-left .5s;
+
+
+}
+
+.about-us-container{
+    width: 70%;
+    align-self: center;
+    margin: auto;
+    align-items:flex-start;
+    padding: 10px;
+    
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top:80px;
+    color: aliceblue;
+    background-color: rgba(0,0,50,0.8);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.about-us-container h2{
+    font-weight: 400;
+    font-size: 2rem;
+    position: relative;
+    left: -1px;
+}
+
+.about-us-container p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+#student-row{
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+}
+#student-section{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top:80px;
+    background-color: aliceblue;
+    padding: 10px;
+    
+    
+}
+#student-left{
+    align-self: flex-start;
+    
+    width:25%;
+    margin-left:100px;
+}
+#student-middle{
+   margin-left:200px;
+    width:25%;
+    
+}
+#student-right{
+   
+    margin-left: 100px;
+    
+    width:25%;
+    
+}
+
+#appointment-submit{
+    background-color: rgb(30, 30, 146);
+    color: aliceblue;
+    padding: 10px;
+    font-size:1rem;
+    margin-top: 100px;
+
+}
+
+#appointment-submit :hover{
+    cursor: pointer;
+}
+
+.searchinput{
+    background-color: rgb(30, 30, 146);
+    width: 100%;
+    outline:none;
+    border:none;
+    color:white;
+
+}
+.logreg-btn{
+    padding: 10px;
+    width:100%;
+}
+.logreg-link{
+    justify-self: center;
+    align-self: center;
+    width: fit-content;
+    width:20%;
+    margin:10px;
+    
+
+}
+#student-register{
+   
+}
+
+
+#teacher-section{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+#student-time{
+    
+}
