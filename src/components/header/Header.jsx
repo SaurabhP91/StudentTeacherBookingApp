@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './header.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { ref } from 'firebase/database';
 function Header() {
+    const loginRef = useRef(null);
   const sidebarOpen = () =>{
     const sidebaricon = document.getElementById("menu-icon-container");
     const closeIcon = document.getElementById("close-icon-container");
@@ -22,6 +24,32 @@ function Header() {
 
 
   }
+
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const serializedItem = searchParams.get('loginuser');
+  
+  // Parse the serialized data back into an object
+  const currentItem = JSON.parse(decodeURIComponent(serializedItem));
+  
+  
+  useEffect(() => {
+    const queryString = window.location.search;
+    if(queryString){
+           // Split the text into an array of words
+    const wordsArray = currentItem.split(" ");
+
+    // Filter out the word to remove
+      const filteredWordsArray = wordsArray.filter(word => word !== "Teacher" && word !== "Student");
+  
+    // Join the filtered array back into a single string
+      const loginUsername = filteredWordsArray.join(" ");
+        loginRef.current.innerHTML = "";
+        loginRef.current.innerHTML = "Logout "+loginUsername;
+      
+     
+    }
+  },[]);
  
   return (
         <div id="header-container">
@@ -57,7 +85,7 @@ function Header() {
 
             </nav>
             <Link to="/login" className="loginbtn" id="loginbtn">
-                <button className="btn btn-secondary" id="login">Login</button>
+                <button className="btn btn-secondary" id="login" ref={loginRef}>Login</button>
             </Link>
 
             <Link to="/register" className="registerbtn" id="registerbtn" >

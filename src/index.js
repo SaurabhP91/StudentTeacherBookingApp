@@ -14,7 +14,7 @@ const appSettings = {
 }
 
 const app = initializeApp(appSettings);
-const database = getDatabase(app);
+export const database = getDatabase(app);
 const databaseContext = createContext();
 
 export const memberListInDB = ref(database, "memberList");
@@ -28,7 +28,7 @@ export const DatabaseProvider = ({children}) => {
   const appointmentListInDB = ref(database, "appointmentList");
 
   return(
-    <databaseContext.Provider value={{studentListInDB,teacherListInDB,appointmentListInDB}}>
+    <databaseContext.Provider value={{studentListInDB,teacherListInDB,appointmentListInDB,database}}>
       {children}
     </databaseContext.Provider>
   )

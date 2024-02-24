@@ -102,3 +102,25 @@ ul{
 }
 
 
+
+
+@media screen and (max-width: 550px){
+    #header-container{
+        position: static;
+    }
+
+    .navbar{
+        width:100%;
+        margin-left: 0;
+        margin-right: 10px;
+        
+    }
+
+    #register{
+        
+    }
+    #menu-icon-container{
+        display: none;
+    }
+
+}

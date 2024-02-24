@@ -2,7 +2,7 @@
     background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(../../../images/welcome-4737158_1920.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 1280px;
     
     margin-left: 0%;
     transition: margin-left .5s;
@@ -47,7 +47,7 @@
     width: 100%;
 }
 #student-section{
-    width:100%;
+    width:90%;
     align-items: center;
     justify-content: center;
     display:flex;
@@ -56,7 +56,9 @@
     top:80px;
     background-color: aliceblue;
     padding: 10px;
+    margin: auto;
     
+    display: none;
     
 }
 #student-left{
@@ -87,7 +89,7 @@
 
 }
 
-#appointment-submit :hover{
+#appointment-submit:hover{
     cursor: pointer;
 }
 
@@ -118,14 +120,192 @@
 
 
 #teacher-section{
-    width:100%;
+    width:90%;
     align-items: center;
     justify-content: center;
     display:flex;
     flex-direction: column;
-    margin-top: 80px;
+    position: relative;
+    top:80px;
+    background-color: aliceblue;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+
+    display: none;
 }
 
-#student-time{
+#teacher-row{
+    display: flex;
+    flex-direction: row;
     
+    width: 100%;
+}
+#teacher-left{
+    align-self: flex-start;
+    width:30%;
+    margin-left:100px;
+    
+}
+
+
+#appointments-table{
+    
+    border: 2px solid black;
+    width: 100%;
+    background-color: rgb(30, 30, 146);
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+#appointments-table th td tr {
+    
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.accept-btn{
+    background-color:aliceblue;
+    width: 100%;
+    height: 100%;
+}
+.cancel-btn{
+    background-color:aliceblue;
+    width: 100%;
+    height: 100%;
+}
+#teacher-right{
+    
+    
+    width:40%;
+    margin-left:100px;
+}
+
+#message-list{
+    background-color: rgb(30, 30, 146);
+    border: 2px solid black;
+    padding: 10px;
+    color: aliceblue;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.message{
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   border-bottom: 2px solid aliceblue;
+   margin-bottom: 20px;
+   background-color: rgb(30, 30, 146);
+
+}
+.message-header{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.message-body{
+    background-color: rgb(45, 117, 177);
+    padding: 5px;
+}
+.msg-open{
+    margin-left: 10px;
+    width: 20%;
+    height: 100%;
+    float: right;
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 1200px){
+   #student-row{
+    
+   }
+   #student-middle{
+    margin-left: 100px;
+   }
+    #student-right{
+
+   }
+   #main-container{
+      height: 1400px;
+   }
+
+}
+
+@media screen and (max-width: 1000px){
+    
+    #student-row{
+     
+    }
+    #student-left{
+        margin-left: 50px;
+    }
+    #student-middle{
+     margin-left: 50px;
+    }
+     #student-right{
+        margin-left: 150px;
+     }
+    
+ 
+ }
+
+ @media screen and (max-width: 790px){
+    #student-row{
+     flex-direction: column;
+    }
+    #student-left{
+        margin-left: 200px;
+        width: 50%;
+    }
+    #student-middle{
+     margin-left: 200px;
+     
+    }
+     #student-right{
+        margin-left: 250px;
+     }
+     #main-container{
+        height:1900px;
+     }
+    
+ 
+ }
+
+@media screen and (max-width: 550px){
+        #main-container{
+            height:100%;
+        }
+    
+    #teacher-left{
+            margin-left: 10px;
+            width:70%;
+        }
+        #teacher-row{
+            flex-direction: column;
+        }
+        #teacher-right{
+            margin-left: 10px;
+            width:70%;
+        }
+        #student-row{
+            flex-direction: column;
+        }
+        #student-left{
+            width:50%;
+            margin-left: 100px;
+        }
+        #student-middle{
+            margin-left: 100px;
+        }
+        #student-right{
+            width:50%;
+            margin-left: 100px;
+        }
 }

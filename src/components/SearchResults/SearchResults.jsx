@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import Main from '../main/Main';
 
-function SearchResults() {
+function SearchResults({changeParent}) {
     const [searchTerm, setSearch] = useState("");
     const searchContext = createContext();
     
@@ -16,7 +16,8 @@ function SearchResults() {
     //const [searchSubmit, setSearchSubmit] = useState("");
     const resultRef = useRef(null);
     const handleClick = (username) => {
-        alert("selected: "+username);
+        setSearch(username);
+        changeParent(username);
     }
     useEffect(() => {
         fetchData();
@@ -24,6 +25,7 @@ function SearchResults() {
     const handleSearch = (e) => {
         
         setSearch(e.target.value);
+        changeParent(searchTerm);
         //console.log(searchTerm);
 
        /*if(searchTerm.length > 0){
@@ -89,7 +91,7 @@ function SearchResults() {
         })
     }
   return (
-    <div id='search-results-container'  >
+    <div id='search-results-container'>
           <span id="searchbar">
               <SearchIcon className="searchicon"/>
               <input type='text' placeholder="Search..." 
@@ -99,7 +101,7 @@ function SearchResults() {
       
         <div id='results-list' ref={resultRef}>
             {results.map(([id, item]) => (
-                    <div key={id} onClick={() => setSearch(item.username)}>
+                    <div key={id} onClick={() => handleClick(item.username)}>
                         {item.username}
                     </div>
                 ))}

@@ -35,7 +35,9 @@ const Sidebar = () => {
             <span id='teacher-features-container'>
                 <span>Teacher Features</span>
                 <ul id='teacher-features'>
-                    <li class="sidebar-link" id="memberlist"><a href="#" onClick={handleClickView}>View All Appointments</a></li>
+                    <li class="sidebar-link" id="memberlist"><a href="#">View All Appointments</a></li>
+                    <li class="sidebar-link" id="memberlist"><a href="#">View Messages</a></li>
+
                 </ul>
             </span>
                 <ul id="admin-operations">
@@ -48,7 +50,7 @@ const Sidebar = () => {
             <ul id="member-operations">
                 <li class="sidebar-link" id="view-receipts"><a href="#">View all Appointments</a></li>
                 <li class="sidebar-link" id="view-receipts"><a href="#">Make an Appointment</a></li>
-                <li class="sidebar-link" id="view-notif"><a href="#">Manage appointments</a></li>
+                <li class="sidebar-link" id="view-notif"><a href="#">Send Messages</a></li>
             </ul>
         
     </div>
