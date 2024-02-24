@@ -14,57 +14,38 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Project Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+An Appointment Booking system for students and teachers where they can arrange a meeting for doubt clearing sessions and lectures.
+Students can book an appointment selecting a teacher accroding to their subject needs, decide the day and time of the appointment and also send messages to the teachers regarding their inquiry.
+Teachers can approve/cancel these appointment requests and also view student's messages.
 
-### `npm run build`
+Page Screenshots:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Home Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot (27)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/0efb5604-5fb7-486c-831c-b38d0f9d93c4)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Sidebar view
 
-### `npm run eject`
+![Screenshot (28)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/1bfae444-16e5-4b13-93a9-1579a069831b)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Register page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshot (29)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/8392298e-f398-463c-9a69-886dd280cfd5)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Login page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Screenshot (30)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/e603e5d5-b658-4a9b-aeee-ff8eae03ba1e)
 
-## Learn More
+Home page after logging in as a teacher with information sent in the URL
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot (31)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/e316434c-2209-4c58-97e7-bf16763e5445)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Teacher section after logging in as teacher where they can view appointments, approve/cancel them and also view messages from students
 
-### Code Splitting
+![Screenshot (32)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/deb462e6-43c9-4149-81ca-8804964a7482)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Student section after logging in as student where they can select a day from the calendar, select the time and search for the teacher
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot (34)](https://github.com/SaurabhP91/StudentTeacherBookingApp/assets/89243008/67b139b0-e25a-4ab9-897f-09dc4703be1b)
