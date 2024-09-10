@@ -3,7 +3,7 @@
 ## Project Description
 
 An Appointment Booking system for students and teachers where they can arrange a meeting for doubt clearing sessions and lectures.
-Students can book an appointment selecting a teacher accroding to their subject needs, decide the day and time of the appointment and also send messages to the teachers regarding their inquiry.
+Students can book an appointment selecting a teacher according to their subject needs, decide the day and time of the appointment and also send messages to the teachers regarding their inquiry.
 Teachers can approve/cancel these appointment requests and also view student's messages.
 Created using React, HTML, CSS, Javascript, Firebase realtime database and React Hooks.
 
